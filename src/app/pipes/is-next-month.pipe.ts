@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { isNextMonth } from '../utils/is-current-month';
+import { isNextMonth } from '../utils/is-next-month';
 
 @Pipe({
   name: 'isNextMonth',

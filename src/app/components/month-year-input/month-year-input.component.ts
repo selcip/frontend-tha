@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { addMonths, subMonths } from 'date-fns';
 import { KeyboardKeys } from '../../enums/keyboard-keys.enum';
-import { isNextMonth } from '../../utils/is-current-month';
+import { isNextMonth } from '../../utils/is-next-month';
 
 @Component({
   selector: 'tha-month-year-input',
