@@ -1,0 +1,15 @@
+<div class="monthly-deposits">
+  <span>Monthly amount</span>
+  <span>{{ amount / (reachDate | differenceFromTodayInMonths) | currency: "USD":"symbol":"1.0-0" }}</span>
+</div>
+
+<div class="monthly-deposits-help-text">
+  <p>
+    You're planning
+    <strong>{{ reachDate | differenceFromTodayInMonths }} {{ (reachDate | differenceFromTodayInMonths) > 1 ? 'monthly deposits' : 'deposit'}}</strong>
+    to reach your
+    <strong>{{ amount | currency: "USD":"symbol":"1.0-0" }}</strong>
+    goal by
+    <strong>{{ reachDate | date:'MMMM y'}}.</strong>
+  </p>
+</div>

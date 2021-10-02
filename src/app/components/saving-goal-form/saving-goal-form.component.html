@@ -1,0 +1,26 @@
+<form>
+  <div class="form-field">
+    <span class="form-field__label">Total amount</span>
+    <div class="form-field__input">
+      <img class="form-field__suffix" src="assets/dollar-sign.svg" alt="" />
+      <input
+        type="text"
+        mask="separator.2"
+        name="amount"
+        thousandSeparator=","
+        [(ngModel)]="amount"
+        placeholder="12,345"
+      />
+    </div>
+  </div>
+
+  <div class="form-field">
+    <span class="form-field__label">Reach goal by</span>
+    <div class="form-field__input form-field__input--no-padding">
+      <tha-month-year-input
+        [(ngModel)]="reachDate"
+        name="reachDate"
+      ></tha-month-year-input>
+    </div>
+  </div>
+</form>
