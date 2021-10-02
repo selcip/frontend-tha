@@ -1,0 +1,22 @@
+$breakpoints: (
+  "phone": 599px,
+  "desktop": 1200px,
+);
+@mixin device-type($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin fixed-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}

@@ -1,0 +1,27 @@
+@import "../../../mixins";
+
+.header {
+  @include fixed-top;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 56px;
+  height: 80px;
+  transition: 0.1s all linear;
+
+  @include device-type(phone, "max") {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .header-logo {
+    transition: 0.1s all linear;
+
+    @include device-type(phone, "max") {
+      width: 75px;
+    }
+  }
+}
