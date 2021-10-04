@@ -40,8 +40,8 @@ export class MonthYearInputComponent implements ControlValueAccessor {
 
   onTouched = () => {};
 
-  @HostListener('keyup', ['$event'])
-  onKeyUp(event: KeyboardEvent) {
+  @HostListener('keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case KeyboardKeys.Left:
         if (isNextMonth(this.date)) {
